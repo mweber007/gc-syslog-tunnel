@@ -14,7 +14,7 @@ There are two elements which ensure a sable connection:
 1. systemd monitors the processes and restarts them if they crash. The systemd service file can be found at /etc/systemd/system/gc-syslog-tunnel.service.
 2. the script contains the autossh binary which it installs as /usr/local/lib/autossh/autossh. Instead of ssh directly we call autossh as a wrapper for ssh which monitors the ssh connection via port 12345 and restarts the connection when it crashed.
 
-The configuration of the connection can be changed in the file /etc/default/gc-syslog-tunnel
+The configuration of the connection can be changed in the file /etc/default/gc-syslog-tunnel.
 After any change to the configuration issue the command:
 
 systemctl restart gc-syslog-tunnel
